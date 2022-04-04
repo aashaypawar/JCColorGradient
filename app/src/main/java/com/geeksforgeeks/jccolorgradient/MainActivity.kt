@@ -65,6 +65,26 @@ class MainActivity : ComponentActivity() {
                             Text(text = "Vertical Gradient Gray to White", fontSize = 20.sp)
                         }
 
+                        // Adding a Space of height 100dp
+                        Spacer(modifier = Modifier.height(100.dp))
+
+                        // Declaring 4 Colors
+                        val colorCyan = Color.Cyan
+                        val colorBlack = Color.Black
+                        val colorBlue = Color.Blue
+                        val colorMagenta = Color.Magenta
+
+                        // Creating a Radial Gradient Color
+                        val gradientRadial = Brush.radialGradient(listOf(colorCyan, colorBlack, colorBlue, colorMagenta))
+
+                        // Creating a sample Row and setting is background with above Gradient Color
+                        Row(
+                            Modifier
+                                .fillMaxWidth()
+                                .height(100.dp)
+                                .background(gradientRadial)) {
+                            Text(text = "Radial Gradient", fontSize = 20.sp)
+                        }
                     }
                 }
             )
